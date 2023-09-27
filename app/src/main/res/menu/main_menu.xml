@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+<!--    <item android:id="@+id/localImagesFragment"-->
+<!--        android:title="Local"-->
+<!--        android:icon="@drawable/ic_local" />-->
+
+<!--    <item android:id="@+id/networkImagesFragment"-->
+<!--        android:title="Network"-->
+<!--        android:icon="@drawable/ic_network" />-->
+
+</menu>

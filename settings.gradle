@@ -12,5 +12,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "NewTryOfGallery"
+rootProject.name = "TagGalleryApp"
 include ':app'

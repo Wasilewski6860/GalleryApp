@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/localImagesFragment">
+
+    <fragment
+        android:id="@+id/localImagesFragment"
+        android:name="com.example.newtryofgallery.presentation.local_images.LocalImagesFragment"
+        android:label="fragment_local_images"
+        tools:layout="@layout/fragment_local_images" >
+        <action
+            android:id="@+id/action_localImagesFragment_to_networkImagesFragment"
+            app:destination="@id/networkImagesFragment" />
+        <action
+            android:id="@+id/action_localImagesFragment_to_imageFragment"
+            app:destination="@id/imageFragment" />
+        <action
+            android:id="@+id/action_localImagesFragment_to_addImageFragment"
+            app:destination="@id/addImageFragment" />
+        <action
+            android:id="@+id/action_localImagesFragment_to_imageInfoFragment"
+            app:destination="@id/imageInfoFragment" />
+        <action
+            android:id="@+id/action_localImagesFragment_to_myFragment"
+            app:destination="@id/myFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/networkImagesFragment"
+        android:name="com.example.newtryofgallery.presentation.network_images.NetworkImagesFragment"
+        android:label="fragment_network_images"
+        tools:layout="@layout/fragment_network_images" >
+        <action
+            android:id="@+id/action_networkImagesFragment_to_imageFragment"
+            app:destination="@id/imageFragment" />
+        <action
+            android:id="@+id/action_networkImagesFragment_to_addImageFragment"
+            app:destination="@id/addImageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/imageFragment"
+        android:name="com.example.newtryofgallery.presentation.image.ImageFragment"
+        android:label="fragment_image"
+        tools:layout="@layout/fragment_image" >
+        <action
+            android:id="@+id/action_imageFragment_to_imageInfoFragment"
+            app:destination="@id/imageInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/imageInfoFragment"
+        android:name="com.example.newtryofgallery.presentation.image_info.ImageInfoFragment"
+        android:label="fragment_image_info"
+        tools:layout="@layout/fragment_image_info" >
+        <action
+            android:id="@+id/action_imageInfoFragment_to_imageFragment"
+            app:destination="@id/imageFragment" />
+        <argument
+            android:name="id"
+            android:defaultValue="-1"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_imageInfoFragment_to_addImageFragment"
+            app:destination="@id/addImageFragment" />
+        <action
+            android:id="@+id/action_imageInfoFragment_to_localImagesFragment"
+            app:destination="@id/localImagesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addImageFragment"
+        android:name="com.example.newtryofgallery.presentation.add_image.AddImageFragment"
+        android:label="fragment_add_image"
+        tools:layout="@layout/fragment_add_image" >
+        <action
+            android:id="@+id/action_addImageFragment_to_localImagesFragment"
+            app:destination="@id/localImagesFragment" />
+        <argument
+            android:name="id"
+            android:defaultValue="-1"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/myFragment"
+        android:name="com.example.newtryofgallery.presentation.MyFragment"
+        android:label="MyFragment" >
+        <argument
+            android:name="id"
+            android:defaultValue="-1"
+            app:argType="integer" />
+    </fragment>
+
+</navigation>

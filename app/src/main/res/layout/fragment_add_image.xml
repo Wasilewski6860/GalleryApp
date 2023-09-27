@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scroll_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.example.newtryofgallery.presentation.add_image.AddImageFragment">
+
+    <LinearLayout
+        android:id="@+id/add_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <ImageView
+            android:id="@+id/image_button"
+            android:layout_width="216dp"
+            android:layout_height="204dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/big_button_shape"
+            android:contentDescription="Add Picture"
+            android:src="@drawable/ic_camera" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_picture_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="40dp"
+            android:hint="Title"
+            android:textColorHint="@color/dark_grey"
+            app:boxCornerRadiusBottomEnd="56dp"
+            app:boxCornerRadiusBottomStart="56dp"
+            app:boxCornerRadiusTopEnd="56dp"
+            app:boxCornerRadiusTopStart="56dp"
+            app:boxStrokeColor="@color/grey"
+            app:endIconCheckable="true"
+            android:fontFamily="serif"
+            app:endIconDrawable="@drawable/ic_delete_x"
+            app:endIconMode="clear_text"
+            app:errorEnabled="true"
+            app:helperText="Add title"
+            app:helperTextEnabled="true"
+            app:helperTextTextColor="@color/dark_grey"
+            app:hintAnimationEnabled="true"
+            app:hintEnabled="true"
+            app:hintTextColor="@color/dark_grey">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_picture_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="text"
+                android:fontFamily="serif"
+                android:textColor="@color/black" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_picture_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="24dp"
+            android:hint="Description"
+            android:textColorHint="@color/dark_grey"
+            app:boxCornerRadiusBottomEnd="34dp"
+            app:boxCornerRadiusBottomStart="34dp"
+            app:boxCornerRadiusTopEnd="34dp"
+            app:boxCornerRadiusTopStart="34dp"
+            app:boxStrokeColor="@color/grey"
+            app:endIconCheckable="true"
+            app:endIconDrawable="@drawable/ic_delete_x"
+            android:fontFamily="serif"
+            app:endIconMode="clear_text"
+            app:errorEnabled="true"
+            app:helperText="Optional field"
+            app:helperTextEnabled="true"
+            app:helperTextTextColor="@color/dark_grey"
+            app:hintAnimationEnabled="true"
+            app:hintEnabled="true"
+            app:hintTextColor="@color/dark_grey">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_picture_description"
+                android:layout_width="match_parent"
+                android:layout_height="154dp"
+                android:gravity="top"
+                android:fontFamily="serif"
+                android:inputType="text"
+                android:textColor="@color/black" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_rc_views"
+            android:layout_width="match_parent"
+            android:layout_height="500dp">
+
+            <!-- Левый RecyclerView -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewLeft"
+                android:layout_width="0dp"
+                android:layout_height="500dp"
+                app:layout_constraintStart_toStartOf="@+id/layout_rc_views"
+                app:layout_constraintEnd_toStartOf="@id/recyclerViewRight"
+                app:layout_constraintTop_toTopOf="@+id/layout_rc_views"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="1"
+                tools:itemCount="10"
+                tools:listitem="@layout/tag_item"
+                app:layout_constraintBottom_toBottomOf="@+id/layout_rc_views"
+                />
+
+            <!-- Правый RecyclerView -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewRight"
+                android:layout_width="0dp"
+                android:layout_height="500dp"
+                app:layout_constraintStart_toEndOf="@id/recyclerViewLeft"
+                app:layout_constraintEnd_toEndOf="@+id/layout_rc_views"
+                app:layout_constraintTop_toTopOf="@+id/layout_rc_views"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="1"
+                tools:itemCount="10"
+                tools:listitem="@layout/tag_item"
+                app:layout_constraintBottom_toBottomOf="@+id/layout_rc_views"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:id="@+id/button_save"
+            style="@style/Widget.Material3.Button.TonalButton"
+
+            android:layout_width="match_parent"
+            android:fontFamily="serif"
+            android:layout_height="@dimen/long_buttons_height"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/small_button_shape"
+            android:contentDescription="Add Picture"
+
+            android:gravity="center"
+            android:text="Save"
+            android:textSize="24sp" />
+
+
+
+        <Button
+            android:id="@+id/button_cancel"
+            style="@style/SaveButton"
+            android:layout_width="match_parent"
+            android:fontFamily="serif"
+            android:layout_height="@dimen/long_buttons_height"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="24dp"
+            android:contentDescription="Add Picture"
+
+            android:text="Cancel"
+            android:textSize="24sp" />
+
+    </LinearLayout>
+
+
+
+</ScrollView>
