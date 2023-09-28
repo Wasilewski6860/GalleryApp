@@ -31,20 +31,44 @@ Written using Kotlin, Room for database, Koin for Dependency Injections, Ambilwa
   <img src="screenshots/adding_image_added_tags.png" width="500">
 </li>
 <li>
-  Edit shift
+  Created
 </li>
 <li>
-  <img src="screenshots/Screenshot_20230927_233136.png" width="500">
+  <img src="screenshots/after_added.png" width="500">
 </li>
 <li>
-  Test on first date
+  Second Image creating
 </li>
 <li>
-  <img src="screenshots/Screenshot_20230927_233208.png" width="500">
+  <img src="screenshots/second_image_add.png" width="500">
 </li>
 <li>
-  Test on second date
+  Created
 </li>
 <li>
-  <img src="screenshots/Screenshot_20230927_233218.png" width="500">
+  <img src="screenshots/two_images_added_all.png" width="500">
+</li>
+<li>
+  Adding "sea" tag
+</li>
+<li>
+  <img src="screenshots/sea_tag_added_tags.png" width="500">
+</li>
+<li>
+  Afted "sea" tag added
+</li>
+<li>
+  <img src="screenshots/sea_tag_after_added.png" width="500">
+</li>
+<li>
+  Adding "my" tag
+</li>
+<li>
+  <img src="screenshots/my_tag_selected_tags.png" width="500">
+</li>
+<li>
+  Afted "my" tag added
+</li>
+<li>
+  <img src="screenshots/after_my_selected.png" width="500">
 </li>
